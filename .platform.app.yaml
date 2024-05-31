@@ -2,10 +2,6 @@ name: app
 
 type: php:8.3
 
-dependencies:
-    php:
-        composer/composer: "^2"
-
 runtime:
     extensions:
         - apcu
@@ -15,9 +11,7 @@ runtime:
         - mbstring
         - sodium
         - xsl
-        
 
-variables:
 
 build:
     flavor: none
