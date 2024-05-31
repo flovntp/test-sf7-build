@@ -47,7 +47,9 @@ hooks:
         set -x -e
 
         curl -fs https://get.symfony.com/cloud/configurator | bash
-                
+        
+        npm install && npm run build
+
         #NODE_VERSION=18 symfony-build
 
     deploy: |
