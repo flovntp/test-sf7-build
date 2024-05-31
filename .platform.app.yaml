@@ -49,6 +49,7 @@ hooks:
         curl -fs https://get.symfony.com/cloud/configurator | bash
         
         #npm install && npm run build
+        composer --version
         composer install --prefer-dist --no-scripts --no-progress --no-ansi --no-interaction
         composer install --prefer-dist --optimize-autoloader --apcu-autoloader --classmap-authoritative --no-progress --no-ansi --no-interaction
         assets-build
