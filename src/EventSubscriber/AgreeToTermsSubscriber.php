@@ -33,7 +33,12 @@ class AgreeToTermsSubscriber implements EventSubscriberInterface
 
     public function onRequestEvent(RequestEvent $event)
     {
-        $user = $this->security->getUser();
+        try {
+            $user = $this->security->getUser();
+        } catch (\Exception $e ) {
+            var_dump($e->getMessage());
+            return;
+        }
 
         // only need this for authenticated users
         if (!$user instanceof User) {
