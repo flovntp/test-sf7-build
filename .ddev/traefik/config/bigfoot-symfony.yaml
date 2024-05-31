@@ -1,0 +1,86 @@
+#ddev-generated
+
+http:
+  routers:
+    
+    
+    bigfoot-symfony-web-80-http:
+      
+      rule: HostRegexp(`bigfoot-symfony.ddev.site`)
+      
+      service: "bigfoot-symfony-web-80-http"
+      tls: false
+      entrypoints:
+        - http-8086
+    
+    
+    bigfoot-symfony-web-8025-http:
+      
+      rule: HostRegexp(`bigfoot-symfony.ddev.site`)
+      
+      service: "bigfoot-symfony-web-8025-http"
+      tls: false
+      entrypoints:
+        - http-8025
+    
+    
+    
+    
+    
+    
+    bigfoot-symfony-web-80-https:
+      
+      rule: HostRegexp(`bigfoot-symfony.ddev.site`)
+      
+      service: "bigfoot-symfony-web-80-https"
+      
+      tls: true
+      
+      entrypoints:
+        - http-4436
+    
+    
+    bigfoot-symfony-web-8025-https:
+      
+      rule: HostRegexp(`bigfoot-symfony.ddev.site`)
+      
+      service: "bigfoot-symfony-web-8025-https"
+      
+      tls: true
+      
+      entrypoints:
+        - http-8026
+    
+    
+
+  services:
+    
+    bigfoot-symfony-web-80-http:
+      loadbalancer:
+        servers:
+          - url: http://ddev-bigfoot-symfony-web:80
+    
+    bigfoot-symfony-web-8025-http:
+      loadbalancer:
+        servers:
+          - url: http://ddev-bigfoot-symfony-web:8025
+    
+    bigfoot-symfony-web-80-https:
+    
+      loadbalancer:
+        servers:
+          - url: http://ddev-bigfoot-symfony-web:80
+    
+    bigfoot-symfony-web-8025-https:
+    
+      loadbalancer:
+        servers:
+          - url: http://ddev-bigfoot-symfony-web:8025
+    
+
+
+tls:
+  certificates:
+    - certFile: /mnt/ddev-global-cache/traefik/certs/bigfoot-symfony.crt
+      keyFile: /mnt/ddev-global-cache/traefik/certs/bigfoot-symfony.key
+

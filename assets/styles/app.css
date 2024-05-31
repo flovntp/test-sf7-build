@@ -1,0 +1,64 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
+body {
+    background-color: rgb(21, 32, 43);
+    color: #fff;
+}
+
+.bg-dark {
+    background-color: #343a40 !important;
+}
+
+.navbar {
+    padding: .5rem 1rem;
+    position: relative;
+}
+
+.table .bg-info {
+    background-color: #17a2b8 !important;
+}
+
+.table .bg-info th {
+    background-color: inherit;
+}
+
+.table-dark.table-striped tbody tr:nth-of-type(2n+1) {
+    background-color: hsla(0, 0%, 100%, .05);
+}
+
+.table td,
+.table th {
+    padding: .75rem;
+    vertical-align: top;
+}
+
+.top-nav {
+    border-bottom: 1px solid #48535E;
+}
+
+.footer-nav {
+    border-top: 1px solid #48535E;
+}
+
+.big-foot-img {
+    height: 200px;
+    width: auto;
+}
+
+.repo-list-container {
+    background-color: #17a2b8;
+}
+
+.table-content {
+    font-size: .8rem;
+}
+
+.sighting-log-container {
+    border-bottom: 2px dashed #48535E;
+}
+
+.comment-container {
+    background-color: #343a40;
+    border-radius: 5px;
+}

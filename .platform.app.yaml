@@ -18,8 +18,7 @@ runtime:
         
 
 variables:
-    php:
-        opcache.preload: config/preload.php
+
 build:
     flavor: none
 
@@ -31,6 +30,8 @@ web:
             root: "public"
             expires: 1h
             passthru: "/index.php"
+
+# The mounts that will be performed when the package is deployed.
 
 mounts:
     "/var": { source: local, source_path: var }
