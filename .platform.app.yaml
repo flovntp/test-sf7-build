@@ -47,7 +47,7 @@ hooks:
         set -x -e
         ls -la /app/.global/bin/
         
-        #composer --version
+        composer --version
         which composer
         whereis composer
         
