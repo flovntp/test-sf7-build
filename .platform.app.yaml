@@ -47,12 +47,11 @@ hooks:
         set -x -e
         ls -la /app/.global/bin/
         
-        composer --version
+        #composer --version
         which composer
         whereis composer
         
         curl -fs https://get.symfony.com/cloud/configurator | bash
-        symfony composer --version
         
         composer --version
         which composer
