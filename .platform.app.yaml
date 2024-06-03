@@ -46,6 +46,7 @@ hooks:
     build: |
         set -x -e
 
+        composer --version
         curl -fs https://get.symfony.com/cloud/configurator | bash
         
         composer --version
