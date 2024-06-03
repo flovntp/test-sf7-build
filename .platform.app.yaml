@@ -48,10 +48,16 @@ hooks:
         ls -la /app/.global/bin/
         
         #composer --version
-        curl -fs https://get.symfony.com/cloud/configurator | bash
+        which composer
+        whereis composer
         
+        curl -fs https://get.symfony.com/cloud/configurator | bash
         symfony composer --version
+        
         composer --version
+        which composer
+        whereis composer
+        
         composer install --prefer-dist --no-scripts --no-progress --no-ansi --no-interaction
         composer install --prefer-dist --optimize-autoloader --apcu-autoloader --classmap-authoritative --no-progress --no-ansi --no-interaction
         assets-build
