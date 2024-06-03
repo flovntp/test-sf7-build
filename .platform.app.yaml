@@ -46,7 +46,7 @@ hooks:
     build: |
         set -x -e
         ls -la /app/.global/bin/
-        ls -la /nix/
+        
         #composer --version
         curl -fs https://get.symfony.com/cloud/configurator | bash
         
