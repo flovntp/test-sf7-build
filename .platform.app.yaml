@@ -45,9 +45,12 @@ mounts:
 hooks:
     build: |
         set -x -e
-
+        ls -la /app/.global/bin/
+        ls -la /nix/
+        #composer --version
         curl -fs https://get.symfony.com/cloud/configurator | bash
         
+        #symfony composer --version
         composer --version
         composer install --prefer-dist --no-scripts --no-progress --no-ansi --no-interaction
         composer install --prefer-dist --optimize-autoloader --apcu-autoloader --classmap-authoritative --no-progress --no-ansi --no-interaction
