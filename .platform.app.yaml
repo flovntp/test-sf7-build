@@ -48,13 +48,12 @@ hooks:
 
         curl -fs https://get.symfony.com/cloud/configurator | bash
         
-        #npm install && npm run build
-        #symfony composer --version
-        #symfony composer install --prefer-dist --no-scripts --no-progress --no-ansi --no-interaction
-        #symfony composer install --prefer-dist --optimize-autoloader --apcu-autoloader --classmap-authoritative --no-progress --no-ansi --no-interaction
-        #assets-build
+        composer --version
+        composer install --prefer-dist --no-scripts --no-progress --no-ansi --no-interaction
+        composer install --prefer-dist --optimize-autoloader --apcu-autoloader --classmap-authoritative --no-progress --no-ansi --no-interaction
+        assets-build
         
-        NODE_VERSION=18 symfony-build
+        #NODE_VERSION=18 symfony-build
 
     deploy: |
         set -x -e
